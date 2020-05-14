@@ -15,7 +15,7 @@
   <div class="loader">
     <h1>Veuillez patienter pendant le chargement de la page.</h1>
   </div>
-  <header>
+  <header id="header">
     <ul class="link">
       <li><a href="#youtube"><img class="lienSoc" src="img/youtube.png" alt=""></a></li>
       <li><a href="#twitch"><img class="lienSoc" src="img/twitch.png" alt=""></a></li>
@@ -30,7 +30,7 @@
     <button id="soundON" type="button" class="sound" style="top:0.8vw" onclick="soundOFF()"><img src="img/sound.png" alt=""> </button>
     <button id="soundOFF" type="button" class="sound" style="top:-100vw" onclick="soundON()"><img src="img/soundOFF.png" alt=""> </button>
   </header>
-  <div class="presentation">
+  <div class="presentation" id="presentation">
     <h1 class="center"><u>A PROPOS DE MOI</u></h1>
     <div id="photo" >
 
@@ -40,10 +40,10 @@
     <script src="js/age.js"></script>
   </div>
   <div class="transition3">
-    <img src="img/transitionB.png" class="trans2" alt="">
+    <img src="img/transitionB.png" class="trans2" alt="" id="transition1">
   </div>
   <div class="youtube" id="youtube">
-    <h1 class="center"><u>YOUTUBE</u></h1>
+    <h1 class="center" id="titreYT"><u>YOUTUBE</u></h1>
     <p class="center">Des vidéos gamings, de voyages et reacts... beaucoup de choses se passent sur ma chaîne YouTube... Ducoup abonne toi !</p>
     <nav class="center">
       <a href="https://www.youtube.com/channel/UCEo25JecgCB_GGzpCnNggEA?sub_confirmation=1">S'ABONNER</a>
@@ -68,24 +68,24 @@
       <iframe src="https://www.youtube.com/embed/ftA4bwoPJPk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
-  <div class="transition">
-    <img src="img/transition.png" class="trans" alt="">
+  <div class="transition" >
+    <img src="img/transition.png" class="trans" id="imgtrans" alt="">
   </div>
   <div class="twitch" id="twitch">
-    <h1 class="center"><u>TWITCH</u></h1>
-    <p class="center">Je fais des lives sur Twitch de temps en temps !</p>
-    <nav class="center">
+    <h1 class="center" id="titreTW"><u>TWITCH</u></h1>
+    <p class="center" id="twitchPARA">Je fais des lives sur Twitch de temps en temps !</p>
+    <nav class="center" id="twitchLINK">
       <a href="https://twitch.tv/ethanoul">FOLLOW</a>
     </nav>
-    <div class="tP center ">
+    <div class="tP center" id="twitchPL">
       <iframe class="twitchPlayer" src="https://player.twitch.tv/?channel=ethanoul"></iframe>
     </div>
   </div>
-  <div class="transition2">
-    <img src="img/transitionB.png" class="trans" alt="">
+  <div class="transition2" >
+    <img src="img/transitionB.png" class="trans" id="transition3" alt="">
   </div>
   <div class="insta" id="instagram">
-    <h1 class="center"><u>INSTAGRAM</u></h1>
+    <h1 class="center" id="titreIN"><u>INSTAGRAM</u></h1>
     <p>Je fais des vidéos exclusives pour Instagram. Tu peux t'y abonner pour être prévenu à l'avance de la sortie d'un vidéo sur YouTube.</p>
     <nav class="center">
       <a href="https://www.instagram.com/accounts/login/?next=%2Fethanoul%2F&source=follow">FOLLOW</a>
@@ -97,6 +97,7 @@
   <script>
   jQuery(window).load(function(){ jQuery(".loader").fadeOut("200"); });
 </script>
+<script src="js/main.js"></script>
 <script src="js/sound.js"></script>
 </body>
 </html>

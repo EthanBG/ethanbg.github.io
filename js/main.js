@@ -1,6 +1,6 @@
 var image = document.getElementById('imgtrans')
 var img = image.height / 4
-var windowsSize = window.innerHeight * 0.08
+var windowsSize = window.innerHeight * 0.12
 var tailleIMAGE = img + windowsSize
 var elementTitre = [document.getElementById('youtube'), document.getElementById('twitch'), document.getElementById('instagram')]
 

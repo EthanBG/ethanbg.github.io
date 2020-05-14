@@ -1,0 +1,63 @@
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>ETHANOL</title>
+  <link rel="icon" href="img/logo.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" type="image/png" href="img/LOGOETHANOL.png" />
+  <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="css/loader.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+</head>
+<body id="contact">
+
+  <audio id="audioPlayer" src="sound/mrrobot.mp3" autoplay="true" loop="true"></audio>
+  <div class="loader">
+    <h1>Veuillez patienter pendant le chargement de la page.</h1>
+  </div>
+  <header id="header">
+    <ul class="link">
+      <li><a href="index.html#youtube"><img class="lienSoc" src="img/youtube.png" alt=""></a></li>
+      <li><a href="index.html#twitch"><img class="lienSoc" src="img/twitch.png" alt=""></a></li>
+      <li class="troisL"><a href="index.html#instagram"><img class="lienSoc" src="img/instagram.png" alt=""></a></li>
+      <li><a href="portfolio.htlm"><img class="lienSoc" src="img/web.png" alt=""></a></li>
+    </ul>
+    <ul class="titre">
+      <li><h1 style="margin-right:25px">ETH</h1></li>
+      <li><h1 style="margin-left:25px">NOL</h1></li>
+    </ul>
+    <div class="center logoDIV"><button id="piege" type="button" class="btnLO" onclick="i = piege(i)"><img id="logo" src="img/logo.png" alt=""></button></div>
+    <button id="soundON" type="button" class="sound" style="top:0.8vw" onclick="soundOFF()"><img src="img/sound.png" alt=""> </button>
+    <button id="soundOFF" type="button" class="sound" style="top:-100vw" onclick="soundON()"><img src="img/soundOFF.png" alt=""> </button>
+  </header>
+  <div class="formulaire">
+    <form class="inscription" action="php/main.php" method="post">
+      <div class="">
+        <label for="name"><u>NOM :</u></label>
+        <br>
+        <input type="text" id="name" name="user_name" required placeholder="Ton nom">
+      </div>
+      <div class="">
+        <label for="EMAIL"><u>ADRESSE MAIL :</u></label>
+        <br>
+        <input type="email" id="mail" name="user_mail" required placeholder="utilisateur@domaine.fr">
+      </div>
+      <div class="">
+        <label for="msg"><u>MESSAGE :</u></label>
+        <br>
+        <textarea id="msg" name="user_message" required placeholder="Ton message"></textarea>
+      </div>
+      <div class="button btnSUB">
+        <button id="sub" type="submit">ENVOYER</button>
+      </div>
+    </form>
+  </div>
+
+
+
+  <script>
+  jQuery(window).load(function(){ jQuery(".loader").fadeOut("200"); });
+</script>
+<script src="js/main.js"></script>
+<script src="js/sound.js"></script>
+</body>
+</html>

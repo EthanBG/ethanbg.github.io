@@ -376,3 +376,89 @@ header a:hover{
   background: none;
   color: var(--textColor);
 }
+
+#contact{
+  --textColor: #FAFAFF;
+  --colorOpp: #1C1C1C;
+  background-color: var(--colorOpp);
+  color: var(--textColor);
+}
+
+.formulaire{
+  margin-top: 11vh;
+  vertical-align: middle;
+  margin-left: 25vw;
+  margin-right: 25vw;
+}
+
+label{
+  text-align: center;
+  font-size: 2.5vw;
+  font-family: 'Teko', sans-serif;
+}
+
+textarea{
+  width: 50vw;
+  font-size: 1vw;
+  height: 25vw;
+  font-family: 'Quicksand', sans-serif;
+  padding-left: 1.5vw;
+  padding-top: 1.5vw;
+  border: solid 3px var(--colorOpp);
+  outline: 0;
+  outline-color: var(--textColor);
+}
+
+textarea:focus {
+  outline: 3px solid;
+  outline-color: #FAFAFF;
+}
+
+textarea:hover{
+  cursor: url(../cursorPoint.cur), pointer;
+}
+
+input{
+  font-size: 1vw;
+  width: 20vw;
+  height: 5vh;
+  border: solid 3px var(--colorOpp);
+  font-family: 'Quicksand', sans-serif;
+  padding-left: 1.5vw;
+}
+
+input:focus {
+  outline: 3px solid;
+  outline-color: #FAFAFF;
+}
+
+input:hover{
+  cursor: url(../cursorPoint.cur), pointer;
+}
+
+.btnSUB{
+  text-align: right;
+  margin-right: 10.1vw;
+}
+
+#sub{
+
+  margin-top: 1.5vh;
+  font-size: 1.6vw;
+  text-decoration: none;
+  color: var(--colorOpp);
+  background-color: var(--textColor);
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  transition:ease, border-radius 1s, background-color 2s, color 2s, border 1s;
+}
+
+#sub:hover{
+  cursor: url(../cursorPoint.cur), pointer;
+  border-radius: 25px;
+  background-color: var(--colorOpp);
+  color: var(--textColor);
+  border: solid 2px var(--textColor);
+}

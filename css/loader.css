@@ -1,0 +1,26 @@
+.loader{
+  background-color: #1C1C1C;
+  color: #FAFAFF;
+  cursor: wait;
+  height: 100%;
+  left: 0;
+  right: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+.loader h1{
+  background: none;
+  border: none;
+  color: #FAFAFF;
+  font-size: 22px;
+  left: 0;
+  right: 0;
+  font-weight: 700;
+  height: 700px;
+  line-height: 700px;
+  margin: 0 0 10px;
+  padding: 0;
+  text-align: center;
+}

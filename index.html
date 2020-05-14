@@ -1,13 +1,100 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
-  <head>
-    <meta charset="utf-8">$
-    <link rel="shortcut icon" href="images/logo.ico">
-    <link rel="apple-touch-icon" href="logo.png">
-    <link rel="stylesheet" href="style.css" />
-    <title>Redirection en cour</title>
-  </head>
-  <body>
-    <h1 class="center">EN COURS DE CONSTRUCTION.</h1>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>ETHANOL</title>
+  <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="css/loader.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+</head>
+<body>
+
+  <audio id="audioPlayer" src="sound/mrrobot.mp3" autoplay="true" loop="true"></audio>
+  <div class="loader">
+    <h1>Veuillez patienter pendant le chargement de la page.</h1>
+  </div>
+  <header>
+    <ul class="link">
+      <li><a href="#youtube"><img class="lienSoc" src="img/youtube.png" alt=""></a></li>
+      <li><a href="#twitch"><img class="lienSoc" src="img/twitch.png" alt=""></a></li>
+      <li class="troisL"><a href="#instagram"><img class="lienSoc" src="img/instagram.png" alt=""></a></li>
+      <li><a href="portfolio.htlm"><img class="lienSoc" src="img/web.png" alt=""></a></li>
+    </ul>
+    <ul class="titre">
+      <li><h1 style="margin-right:25px">ETH</h1></li>
+      <li><h1 style="margin-left:25px">NOL</h1></li>
+    </ul>
+    <div class="center logoDIV"><button id="piege" type="button" class="btnLO" onclick="i = piege(i)"><img id="logo" src="img/logo.png" alt=""></button></div>
+    <button id="soundON" type="button" class="sound" style="top:0.8vw" onclick="soundOFF()"><img src="img/sound.png" alt=""> </button>
+    <button id="soundOFF" type="button" class="sound" style="top:-100vw" onclick="soundON()"><img src="img/soundOFF.png" alt=""> </button>
+  </header>
+  <div class="presentation">
+    <h1 class="center"><u>A PROPOS DE MOI</u></h1>
+    <div id="photo" >
+
+      <p style="vertical-align:middle">Eh bien bonsoir, je m'appelle Ethan, j'ai <mark id="age"></mark> ans et je suis un passionné d'informatique et de jeux video. Tous ce qu'on peut faire sur un ordinateur m'interesse. Je développe, programme, monte et joue grace à cette merveille. Ducoup j'essaye de faire du contenu sympa sur internet : vidéos, sites, lives et photos ... voici ma vitrine ! </p>
+      <img style="vertical-align:middle" src="img/profil.jpg" class="profil" alt="">
+    </div>
+    <script src="js/age.js"></script>
+  </div>
+  <div class="transition3">
+    <img src="img/transitionB.png" class="trans2" alt="">
+  </div>
+  <div class="youtube" id="youtube">
+    <h1 class="center"><u>YOUTUBE</u></h1>
+    <p class="center">Des vidéos gamings, de voyages et reacts... beaucoup de choses se passent sur ma chaîne YouTube... Ducoup abonne toi !</p>
+    <nav class="center">
+      <a href="https://www.youtube.com/channel/UCEo25JecgCB_GGzpCnNggEA?sub_confirmation=1">S'ABONNER</a>
+    </nav>
+    <h2 class="lastvid"><mark>MA DERNIÈRE VIDÉO :</mark></h2>
+    <h2 class="lastvid2"><mark>MA RECOMMANDATION :</mark></h2>
+    <div id="static_video"></div>
+    <script type="text/javascript">
+    var channelID = "UCEo25JecgCB_GGzpCnNggEA";
+    var reqURL = "https://www.youtube.com/feeds/videos.xml?channel_id=";
+    $.getJSON("https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(reqURL)+channelID, function(data) {
+      var link = data.items[0].link;
+      var id = link.substr(link.indexOf("=")+1);
+      $("#youtube_video").attr("src","https://youtube.com/embed/"+id + "?controls=1&showinfo=0&rel=0");
+    });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <div class="videoContainer">
+      <iframe id="youtube_video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="videoContainer2">
+      <iframe src="https://www.youtube.com/embed/ftA4bwoPJPk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="transition">
+    <img src="img/transition.png" class="trans" alt="">
+  </div>
+  <div class="twitch" id="twitch">
+    <h1 class="center"><u>TWITCH</u></h1>
+    <p class="center">Je fais des lives sur Twitch de temps en temps !</p>
+    <nav class="center">
+      <a href="https://twitch.tv/ethanoul">FOLLOW</a>
+    </nav>
+    <div class="tP center ">
+      <iframe class="twitchPlayer" src="https://player.twitch.tv/?channel=ethanoul"></iframe>
+    </div>
+  </div>
+  <div class="transition2">
+    <img src="img/transitionB.png" class="trans" alt="">
+  </div>
+  <div class="insta" id="instagram">
+    <h1 class="center"><u>INSTAGRAM</u></h1>
+    <p>Je fais des vidéos exclusives pour Instagram. Tu peux t'y abonner pour être prévenu à l'avance de la sortie d'un vidéo sur YouTube.</p>
+    <nav class="center">
+      <a href="https://www.instagram.com/accounts/login/?next=%2Fethanoul%2F&source=follow">FOLLOW</a>
+    </nav>
+    <div class="center">
+      <iframe src="https://www.instagram.com/p/B9KNxjSH5X8/embed/" frameborder="0" class="instaEmbed"></iframe>
+    </div>
+  </div>
+  <script>
+  jQuery(window).load(function(){ jQuery(".loader").fadeOut("200"); });
+</script>
+<script src="js/sound.js"></script>
+</body>
 </html>
